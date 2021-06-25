@@ -1,7 +1,7 @@
 import 'package:citrus_app_mobile/employer/domain/values/name.dart';
 
-class Employeer {
+class Employer {
   final Name name;
 
-  Employeer(this.name);
+  Employer(this.name);
 }
