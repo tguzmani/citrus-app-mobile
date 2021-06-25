@@ -1,6 +1,6 @@
-import 'package:citrus_app_mobile/job_offer/domain/values/OfferDescription.dart';
-import 'package:citrus_app_mobile/job_offer/domain/values/OfferGender.dart';
-import 'package:citrus_app_mobile/job_offer/domain/values/OfferName.dart';
+import 'package:citrus_app_mobile/jobOffer/domain/values/OfferDescription.dart';
+import 'package:citrus_app_mobile/jobOffer/domain/values/OfferGender.dart';
+import 'package:citrus_app_mobile/jobOffer/domain/values/OfferName.dart';
 
 class JobOffer {
   final OfferName name;
