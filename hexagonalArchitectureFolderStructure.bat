@@ -7,4 +7,4 @@ mkdir adapter\in
 mkdir adapter\out
 mkdir application\port
 mkdir application\service
-mkdir domain
+mkdir domain\values
