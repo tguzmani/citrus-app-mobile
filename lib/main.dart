@@ -1,3 +1,5 @@
+import 'package:citrus_app_mobile/album/adapter/out/fetchAlbumAdapter.dart';
+import 'package:citrus_app_mobile/album/domain/album.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -27,6 +29,14 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  Album? _album = new Album(userId: 1, id: 1, title: "title");
+
+  void _fetchAlbum() async {
+    Album album = await FetchAlbumAdapter.fetchAlbum();
+    setState(() {
+      _album = album;
+    });
+  }
 
   void _incrementCounter() {
     setState(() {
@@ -51,11 +61,16 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
+            Text(
+              // _album == null ? _album!.title : "",
+              _album!.title,
+              style: Theme.of(context).textTheme.headline4,
+            )
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: _fetchAlbum,
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ),
